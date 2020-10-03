@@ -14,7 +14,7 @@ const shiftSymbol = (symbol, shift, alphabet) => {
 
 const unshiftSymbol = (symbol, shift, alphabet) => {
 	let index = alphabet.indexOf(symbol)
-	let shiftedIndex = index - shift + alphabet.length
+	let shiftedIndex = Math.abs(index - shift + alphabet.length)
 	if (shiftedIndex > alphabet.length) {
 		shiftedIndex = shiftedIndex % alphabet.length
 	}
