@@ -21,9 +21,8 @@ const unshiftSymbol = (symbol, shift, alphabet) => {
 	return alphabet[shiftedIndex]
 }
 
-const makeCeasarCipher = (string, shift, type) => {
-	if (!string.length) throw Error('The entered string is empty')
-	if (shift < 0) throw Error('Value of shift must be positive')
+const caesarCipher = (string, shift, type) => {
+	if (!string.length) throw new Error('The entered string is empty')
 
 	const symbolsList = string.split('')
 	const outSymbols = symbolsList.map(symbol => {
@@ -35,10 +34,10 @@ const makeCeasarCipher = (string, shift, type) => {
 			case OPERATION_TYPE_DECODE:
 				return unshiftSymbol(symbol, shift, targetAlphabet)
 			default:
-				throw Error('Unknown operation type')
+				return symbol
 		}
 	})
 	return outSymbols.join('')
 }
 
-module.exports = makeCeasarCipher
+module.exports = caesarCipher
