@@ -17,7 +17,7 @@ const validateInputCliData = cb => {
 
 	if (!cli.shift) {
 		error( 'Shift value not specified!')
-	} else if (cli.shift.match(/^[0-9]+$/) === null) {
+	} else if (cli.shift.match(/^-?[0-9]+$/) === null) {
 		error( 'Shift value is not a number')
 	}
 

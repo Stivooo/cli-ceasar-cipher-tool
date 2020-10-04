@@ -4,21 +4,21 @@ const OPERATION_TYPE_ENCODE = 'encode'
 const OPERATION_TYPE_DECODE = 'decode'
 
 const shiftSymbol = (symbol, shift, alphabet) => {
-	let index = alphabet.indexOf(symbol)
+	let index = alphabet.indexOf(symbol) + 1
 	let shiftedIndex = index + shift
 	if (shiftedIndex > alphabet.length) {
 		shiftedIndex = shiftedIndex % alphabet.length
 	}
-	return alphabet[shiftedIndex]
+	return alphabet[--shiftedIndex]
 }
 
 const unshiftSymbol = (symbol, shift, alphabet) => {
 	let index = alphabet.indexOf(symbol)
-	let shiftedIndex = Math.abs(index - shift + alphabet.length)
+	let shiftedIndex = Math.abs(index - shift + alphabet.length) + 1
 	if (shiftedIndex > alphabet.length) {
 		shiftedIndex = shiftedIndex % alphabet.length
 	}
-	return alphabet[shiftedIndex]
+	return alphabet[--shiftedIndex]
 }
 
 const caesarCipher = (string, shift, type) => {
