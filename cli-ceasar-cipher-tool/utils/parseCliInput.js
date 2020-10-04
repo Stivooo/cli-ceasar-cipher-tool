@@ -11,4 +11,3 @@ program
 
 const parseCliInput = () => program.opts()
 module.exports = parseCliInput
-

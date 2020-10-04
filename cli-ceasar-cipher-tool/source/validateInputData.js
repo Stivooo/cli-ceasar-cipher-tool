@@ -7,7 +7,7 @@ const validateInputCliData = cb => {
 		}).call();
 	}
 
-	const cli = parseCliInput();
+	const cli = parseCliInput()
 
 	if (!cli.action) {
 		error( 'Action type not specified!')

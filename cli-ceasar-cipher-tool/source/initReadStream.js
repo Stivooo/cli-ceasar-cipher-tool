@@ -12,7 +12,8 @@ const initReadStream = (pathString, onExit) => {
 		})
 	}
 	process.once('SIGINT', onExit)
+	process.stdin.setEncoding('utf8')
 	return process.stdin
 }
 
-module.exports = initReadStream;
+module.exports = initReadStream

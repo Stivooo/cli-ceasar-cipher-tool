@@ -17,4 +17,4 @@ const initWriteStream = (pathString, onExit) => {
 	return process.stdout
 }
 
-module.exports = initWriteStream;
+module.exports = initWriteStream
