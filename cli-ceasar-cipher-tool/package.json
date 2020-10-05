@@ -1,5 +1,5 @@
 {
-  "name": "task1-caesar-cipher-cli-nodejs",
+  "name": "cli-ceasar-cipher-tool",
   "version": "1.0.0",
   "description": "Caesar Cipher CLI App",
   "main": "main.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Stivooo/rsschool-nodejs.git"
+    "url": "git+https://github.com/Stivooo/cli-ceasar-cipher-tool.git"
   },
-  "author": "Vladimir Rybin",
+  "author": "Stivooo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Stivooo/rsschool-nodejs/issues"
+    "url": "https://github.com/Stivooo/cli-ceasar-cipher-tool/issues"
   },
-  "homepage": "https://github.com/Stivooo/rsschool-nodejs#readme",
+  "homepage": "https://github.com/Stivooo/cli-ceasar-cipher-tool#readme",
   "dependencies": {
     "commander": "^6.1.0"
   }
