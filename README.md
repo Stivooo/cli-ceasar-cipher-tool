@@ -1,21 +1,38 @@
-## cli-ceasar-cipher-tool
+# cli-ceasar-cipher-tool
 
-The tool encrypts and decrypts the text by [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+**Cli-ceasar-cipher-tool** is a tool for encrypt and decrypt the text by [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
-**Installation**
+## Installation
 
 Clone the repository or download the source files
-
 ```bash
 $ git clone https://github.com/Stivooo/cli-ceasar-cipher-tool.git
 ```
-
 The main.js file in the "cli-ceasar-cipher-tool" directory is used to run the tool.
-It is recommended to use the stable (LTS) version of [Node](https://nodejs.org/en/) to run the tool.
 
+It is recommended to use the stable (LTS) version of [Node](https://nodejs.org/en/) to run the tool. \
 If you don't have Node then install it.
 
-**Accepted arguments**:
+Using PPA and package manager on Ubuntu
+```bash
+$ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+$ sudo apt install -y nodejs npm
+```
+
+Using package manager on Arch Linux
+```bash
+$ pacman -S nodejs npm
+```
+
+[Other download methods](https://nodejs.org/en/download/)
+
+After downloading, install npm dependencies (in the "cli-ceasar-cipher-tool" directory)
+```bash
+$ cd cli-ceasar-cipher-tool/
+$ npm install
+```
+
+## Accepted arguments:
 
 1.  **-s, --shift**: a shift value
 2.  **-i, --input**: an input file (optional)
@@ -27,7 +44,7 @@ Only the English alphabet is encoded / decoded, all other characters remain unch
 If the input file is missed - used stdin as an input source. \
 If the output file is missed - used stdout as an output destination.
 
-**Usage example**
+## Usage example
 
 ```bash
 $ node cli-ceasar-cipher-tool/main.js -s 2 -i ./input.txt -o ./output.txt -a encode
